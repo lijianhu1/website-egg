@@ -13,7 +13,7 @@ module.exports = appInfo => {
     port: '3306',
     database: 'ivva',
     username: 'root',
-    password: 'root',
+    password: 'root00..',
     define: { // model的全局配置
       timestamps: false,
       paranoid: false, // 添加软删除

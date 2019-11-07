@@ -16,7 +16,7 @@
   },
   "production": {
     "username": "root",
-    "password": "root",
+    "password": "root00..",
     "database": "imian_prod",
     "host": "127.0.0.1",
     "dialect": "mysql",
