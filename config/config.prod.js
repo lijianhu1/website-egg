@@ -11,7 +11,7 @@ module.exports = appInfo => {
     dialect: 'mysql',
     host: '127.0.0.1',
     port: '3306',
-    database: 'imain_prod',
+    database: 'imian_prod',
     username: 'root',
     password: 'root00..',
     define: { // model的全局配置

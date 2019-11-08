@@ -42,9 +42,11 @@ class UserService extends Service {
       }, {
         model: ctx.model.ResumeSkill,
         attributes: { exclude: [ 'created_at', 'updated_at' ] },
+        as: 'resume_skill',
       }, {
         model: ctx.model.ResumeWork,
         attributes: { exclude: [ 'created_at', 'updated_at' ] },
+        as: 'resume_work',
       }],
     });
     if (result) {
