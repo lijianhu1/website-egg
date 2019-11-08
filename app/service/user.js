@@ -74,6 +74,9 @@ class UserService extends Service {
       });
       if (user) {
         result = await user.update(info.data);
+      } else {
+        info.data.resumeId = ctx.session.passport.user.id;
+        return await ctx.model.ResumeBase.create(info.data);
       }
     } else if (info.type === 'resume_skill') {
       for (const item of info.data) {
