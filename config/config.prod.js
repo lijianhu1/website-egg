@@ -11,9 +11,9 @@ module.exports = appInfo => {
     dialect: 'mysql',
     host: '127.0.0.1',
     port: '3306',
-    database: 'imian_prod',
+    database: 'imian',
     username: 'root',
-    password: 'root00..',
+    password: 'Root00..',
     define: { // model的全局配置
       timestamps: true,
       paranoid: false, // 添加软删除
