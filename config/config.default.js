@@ -36,11 +36,12 @@ module.exports = appInfo => {
     username: 'root',
     password: 'root',
     define: { // model的全局配置
-      timestamps: false,
+      timestamps: true,
       paranoid: false, // 添加软删除
       freezeTableName: true, // 防止修改表名为复数
-      underscored: false, // 防止驼峰式字段被默认转为下划线
+      underscored: false, // 驼峰式字段被默认转为下划线
     },
+    timezone: '+08:00', // 保存为本地时区
     dialectOptions: { // 让读取date类型数据时返回字符串而不是UTC时间
       dateStrings: true,
       typeCast(field, next) {

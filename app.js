@@ -26,6 +26,7 @@ class AppBootHook {
       user.password = await decrypt(user.password);
       const auth = await ctx.service.user.login(user);
       ctx.rotateCsrfSecret();
+      console.log(auth)
       if (auth.code === 0) {
         return auth.data;
       }

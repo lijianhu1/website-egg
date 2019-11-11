@@ -9,8 +9,8 @@ module.exports = app => {
     startDate: STRING(30),
     endDate: STRING(30),
     desc: STRING(500),
-    created_at: DATE,
-    updated_at: DATE,
+    createdAt: DATE,
+    updatedAt: DATE,
   }, {
     freezeTableName: true, // Model 对应的表名将与model名相同
   });

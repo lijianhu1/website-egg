@@ -13,9 +13,10 @@ module.exports = app => {
     age: INTEGER,
     telephone: INTEGER,
     email: STRING(50),
-    created_at: DATE,
-    updated_at: DATE,
+    createdAt: DATE,
+    updatedAt: DATE,
   }, {
     freezeTableName: true, // Model 对应的表名将与model名相同
+    timestamps: true, // 自动维护时间戳 [ created_at、updated_at ]
   });
 };

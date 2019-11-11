@@ -14,18 +14,24 @@ module.exports = {
       age: INTEGER,
       telephone: STRING(15),
       email: STRING(50),
-      created_at: DATE,
-      updated_at: DATE,
+      createdAt: DATE,
+      updatedAt: DATE,
     }, {
       timestamps: false,
     });
     await queryInterface.createTable('resume_skill', {
       id: { type: INTEGER, primaryKey: true, autoIncrement: true },
       resumeId: INTEGER,
-      skillName: STRING(30),
-      skillDegree: INTEGER,
-      created_at: DATE,
-      updated_at: DATE,
+      skillName: {
+        type: STRING(30),
+        allowNull: false,
+      },
+      skillDegree: {
+        type: INTEGER,
+        allowNull: false,
+      },
+      createdAt: DATE,
+      updatedAt: DATE,
     }, {
       timestamps: false,
     });
@@ -36,8 +42,8 @@ module.exports = {
       startDate: STRING(30),
       endDate: STRING(30),
       desc: STRING(500),
-      created_at: DATE,
-      updated_at: DATE,
+      createdAt: DATE,
+      updatedAt: DATE,
     }, {
       timestamps: false,
     });

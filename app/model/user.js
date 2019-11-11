@@ -8,8 +8,8 @@ module.exports = app => {
     password: STRING(255),
     sex: INTEGER,
     avatar: STRING(255),
-    updated_at: DATE,
-    created_at: DATE,
+    updatedAt: DATE,
+    createdAt: DATE,
   }, {
     freezeTableName: true, // Model 对应的表名将与model名相同
   });

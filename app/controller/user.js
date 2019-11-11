@@ -10,12 +10,12 @@ class UserController extends Controller {
     const type = ctx.query.type;
     if (ctx.isAuthenticated() && type === '1') {
       ctx.body = {
-        code: 200,
+        code: 0,
         message: '登录成功！',
       };
     } else {
       ctx.body = {
-        code: 0,
+        code: 1,
         message: '登录失败！',
       };
     }
