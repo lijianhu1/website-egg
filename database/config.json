@@ -26,6 +26,17 @@
     "database": "imian",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "pool":{
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    },
+    "define":{
+      "charset": "utf8",
+      "dialectOptions":{
+        "collate": "utf8_general_ci"
+      }
+    }
   }
 }
