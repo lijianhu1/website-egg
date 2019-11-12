@@ -129,6 +129,19 @@ class UserService extends Service {
     });
     return Object.assign({}, Code.SUCCESS);
   }
+  async updateAvatar(info) {
+    const { ctx } = this;
+    if (!info.avatar) {
+      return Code.ERROR;
+    }
+    const user = await ctx.model.User.findByPk(ctx.session.passport.user.id);
+    if (!user) {
+      ctx.status = 404;
+      return;
+    }
+    await user.update({ avatar: info.avatar });
+    return Object.assign({}, Code.SUCCESS);
+  }
 }
 
 module.exports = UserService;

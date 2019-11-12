@@ -3,7 +3,8 @@ module.exports = () => {
   return async function(ctx, next) {
     // 排除掉不用登陆就能看的功能页面。
     const noNeedLoginPath = [ '/login', '/authCallback', '/getPublicKey', '/user/register' ];
-    if (noNeedLoginPath.indexOf(ctx.path) === -1 && !ctx.isAuthenticated()) {
+    const reg = new RegExp(/^\/public\//);
+    if ((noNeedLoginPath.indexOf(ctx.path) === -1 && !ctx.isAuthenticated())) {
       ctx.session.returnTo = ctx.path;
       ctx.body = {
         code: 302,

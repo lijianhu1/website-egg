@@ -11,6 +11,7 @@ module.exports = app => {
   router.get('/getUserInfo', controller.user.getUserInfo);
   router.post('/editUserInfo', controller.user.editUserInfo);
   router.get('/deleteUserInfo', controller.user.deleteUserInfo);
+  router.get('/updateAvatar', controller.user.updateAvatar);
   // router.get('/logout', controller.user.logout);
   // router.post('/login', controller.user.login);
 };

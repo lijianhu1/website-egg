@@ -46,6 +46,11 @@ class UserController extends Controller {
     const config = ctx.request.query;
     ctx.body = await ctx.service.user.deleteUserInfo(config);
   }
+  async updateAvatar() {
+    const { ctx } = this;
+    const config = ctx.request.query;
+    ctx.body = await ctx.service.user.updateAvatar(config);
+  }
 }
 
 module.exports = UserController;

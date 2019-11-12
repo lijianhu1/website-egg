@@ -7,13 +7,16 @@
     "declarations": true
   },
   "dependencies": {
+    "await-stream-ready": "^1.0.1",
     "egg": "^2.15.1",
     "egg-passport": "^2.1.0",
     "egg-scripts": "^2.11.0",
     "egg-sequelize": "^5.2.0",
+    "md5": "^2.2.1",
     "mysql2": "^2.0.0",
     "node-rsa": "^1.0.6",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "stream-wormhole": "^1.1.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
