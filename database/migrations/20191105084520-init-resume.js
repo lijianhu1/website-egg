@@ -18,6 +18,7 @@ module.exports = {
       updatedAt: DATE,
     }, {
       timestamps: false,
+      charset: 'utf8mb4',
     });
     await queryInterface.createTable('resume_skill', {
       id: { type: INTEGER, primaryKey: true, autoIncrement: true },
@@ -34,6 +35,7 @@ module.exports = {
       updatedAt: DATE,
     }, {
       timestamps: false,
+      charset: 'utf8mb4',
     });
     await queryInterface.createTable('resume_work', {
       id: { type: INTEGER, primaryKey: true, autoIncrement: true },
@@ -46,6 +48,7 @@ module.exports = {
       updatedAt: DATE,
     }, {
       timestamps: false,
+      charset: 'utf8mb4',
     });
   },
   // 在执行数据库降级时调用的函数，删除 users 表
