@@ -1,7 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-
+const path = require('path');
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -51,6 +51,18 @@ module.exports = appInfo => {
         return next();
       },
     },
+  };
+  config.swaggerdoc = {
+    dirScanner: './app/controller',
+    apiInfo: {
+      title: 'egg 接口文档',
+      description: 'example for swaggerdoc',
+      version: '1.0.0',
+    },
+    schemes: [ 'http' ],
+    enable: true,
+    routerMap: true,
+    enableSecurity: false,
   };
   // add your user config here
   const userConfig = {
