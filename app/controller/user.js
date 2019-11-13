@@ -44,11 +44,12 @@ class UserController extends Controller {
    * @summary 获取用户信息
    * @description 获取当前用户信息
    * @router get /getUserInfo
+   * @request query string id 用户id
    * @response 200 UserInfo successed
    */
   async getUserInfo() {
     const { ctx } = this;
-    ctx.body = await ctx.service.user.getUserInfo();
+    ctx.body = await ctx.service.user.getUserInfo(ctx.request.query);
   }
 
   /**

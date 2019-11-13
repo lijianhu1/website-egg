@@ -3,12 +3,12 @@ const Service = require('egg').Service;
 const { Code, isNull } = require('../util/util');
 
 class UserService extends Service {
-  async getUserInfo() {
+  async getUserInfo(info) {
     const { ctx } = this;
     const result = await ctx.model.User.findOne({
       attributes: [ 'id', 'username', 'sex', 'avatar' ],
       where: {
-        id: ctx.session.passport.user.id,
+        id: info.id || ctx.session.passport.user.id,
       },
       include: [{
         model: ctx.model.ResumeBase,
